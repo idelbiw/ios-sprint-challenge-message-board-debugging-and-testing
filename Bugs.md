@@ -26,3 +26,7 @@ simply move the tableView.reloadData() to be called on the main Queue, (Dispatch
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- ---- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- ---- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- ---- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
 -- Problem #4:
+when creating a message, the cancel button doesn't do anything
+
+-- -- Solution #4:
+just call dismiss(true) in the IBAction of the cancel button, because there wasn't any code written in there
