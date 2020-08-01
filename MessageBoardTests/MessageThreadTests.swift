@@ -11,15 +11,6 @@ import XCTest
 
 class MessageThreadTests: XCTestCase {
     
-    //Properties
-//    let app = XCUIApplication()
-    
-    //Methods
-//    func launchApp() {
-//        app.launch()
-//        setUp()
-//    }
-    
     //MARK: - Tests -
     
     func testThreadCreation() {
