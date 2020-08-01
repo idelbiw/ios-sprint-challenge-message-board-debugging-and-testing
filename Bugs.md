@@ -13,7 +13,7 @@ the " .resume() " was missing at the end of the url session data task, i tried t
 The title of the thread won't show in the title bar in the the detail view
 
 -- -- Solution #2:
-
+In the prepareForSegue method, the segue identifier was misspelled and missing an 's'
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- ---- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- ---- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- ---- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 

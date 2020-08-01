@@ -14,11 +14,14 @@ class MessageThreadDetailTableViewController: UITableViewController {
 
     var messageThread: MessageThread?
     var messageThreadController: MessageThreadController?
+    
+    //MARK: - Methods -
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = messageThread?.title
+        if isViewLoaded {
+         title = messageThread?.title
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
