@@ -25,6 +25,7 @@ class MessageDetailViewController: UIViewController {
     }
     
     @IBAction func sendMessage(_ sender: Any) {
+        
         guard let senderName = senderNameTextField.text,
             let messageText = messageTextView.text,
             let messageThread = messageThread else { return }
@@ -34,4 +35,5 @@ class MessageDetailViewController: UIViewController {
         })
         dismiss(animated: true)
     }
-}
+    
+} //End of class

@@ -30,3 +30,15 @@ when creating a message, the cancel button doesn't do anything
 
 -- -- Solution #4:
 just call dismiss(true) in the IBAction of the cancel button, because there wasn't any code written in there
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- ---- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- ---- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- ---- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+-- Problem #5:
+when trying to send a message in a thread, the send button doesn't seem to be working
+
+-- -- Solution #5:
+the segue identifier was once again misspelled, just needed an 's', also: In the prepare for segue of the messageThreadsDetailViewController, the destination was being treated as the message detail view controller, which is wrong because the destination is the navigation controller (This problem was more than one problem lol)
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- ---- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- ---- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- ---- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+
