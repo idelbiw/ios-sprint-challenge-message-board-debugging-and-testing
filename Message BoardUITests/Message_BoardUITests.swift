@@ -24,9 +24,6 @@ class Message_BoardUITests: XCTestCase {
         app.launch()
     }
     
-    func launchApp() {
-        app.launch()
-    }
     
     //MARK: - Tests -
     
@@ -37,8 +34,8 @@ class Message_BoardUITests: XCTestCase {
         app.keys["e"].tap()
         app.keys["s"].tap()
         app.keys["t"].tap()
-        app/*@START_MENU_TOKEN@*/.buttons["Return"]/*[[".keyboards",".buttons[\"return\"]",".buttons[\"Return\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.tables/*@START_MENU_TOKEN@*/.staticTexts["test"]/*[[".cells.staticTexts[\"test\"]",".staticTexts[\"test\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.buttons["Return"].tap()
+        app.tables.staticTexts["test"].tap()
         
         XCTAssertEqual(app.navigationBars["test"].staticTexts["test"].label, "test")
         
@@ -52,9 +49,24 @@ class Message_BoardUITests: XCTestCase {
         app.keys["s"].tap()
         app.keys["t"].tap()
         app.buttons["Return"].tap()
+        app.tables.staticTexts["test"].tap()
         
         let createdCellLabel = app.tables.cells.staticTexts["test"].label
         XCTAssertEqual(createdCellLabel, "test")
+        
+    }
+    
+    func testCancelMessgaeButton() {
+        
+        app.tables.textFields["Create a new thread:"].tap()
+        app.keys["t"].tap()
+        app.keys["e"].tap()
+        app.keys["s"].tap()
+        app.keys["t"].tap()
+        app.buttons["Return"].tap()
+        app.tables.staticTexts["test"].tap()
+        app.navigationBars["test"].buttons["Add"].tap()
+        app.navigationBars["New Message"].buttons["Cancel"].tap()
         
     }
     
