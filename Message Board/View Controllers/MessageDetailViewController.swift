@@ -34,6 +34,7 @@ class MessageDetailViewController: UIViewController {
             print("Message created!")
         })
         dismiss(animated: true)
+        
     }
     
 } //End of class

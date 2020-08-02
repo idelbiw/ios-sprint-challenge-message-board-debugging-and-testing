@@ -41,4 +41,9 @@ the segue identifier was once again misspelled, just needed an 's', also: In the
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- ---- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- ---- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- ---- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
+-- Problem #6:
+When the user taps send in the message detail view controller, the thread detail table view doesn't automatically reload data so the message cannot be seen unless the user leaves the tableView and comes back.
 
+-- -- Solution #6:
+The code already suggests that the tableView should call realoadData() whenever the viewWillAppear() method is called, the only problem is that the iOS 13 sheet-style modal view controller will not allow that logic to work.
+A simple solution is to just make the modal view controller full screen from storyboard.
