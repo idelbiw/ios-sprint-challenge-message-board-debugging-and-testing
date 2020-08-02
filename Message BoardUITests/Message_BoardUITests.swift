@@ -44,4 +44,18 @@ class Message_BoardUITests: XCTestCase {
         
     }
     
+    func testTableViewRealoadDataWhenAddingThreads() {
+        
+        app.tables.textFields["Create a new thread:"].tap()
+        app.keys["t"].tap()
+        app.keys["e"].tap()
+        app.keys["s"].tap()
+        app.keys["t"].tap()
+        app.buttons["Return"].tap()
+        
+        let createdCellLabel = app.tables.cells.staticTexts["test"].label
+        XCTAssertEqual(createdCellLabel, "test")
+        
+    }
+    
 } //End of class
