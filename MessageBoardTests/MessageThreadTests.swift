@@ -29,4 +29,17 @@ class MessageThreadTests: XCTestCase {
         
     }
     
+    func testMessageCreation() {
+        
+        let messageThreadController = MessageThreadController()
+        messageThreadController.createMessageThread(with: "TestThread", completion: {} )
+        usleep(7_000_000)
+        let messageThread = messageThreadController.messageThreads[0]
+        messageThreadController.createMessage(in: messageThread, withText: "TestMessage", sender: "TestSender", completion: {} )
+        let messagesCount = messageThread.messages.count
+        
+        XCTAssertEqual(messagesCount, 1)
+        
+    }
+    
 }
